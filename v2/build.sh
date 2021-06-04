@@ -44,6 +44,8 @@ if (( $? )); then # this will get run inside the build container
   sed -i 's/\#include \"MessageFederate\.h\"/\#include \"helics\/shared_api_library\/MessageFederate\.h\"/' helics_wrap.cxx
   sed -i 's/\#include \"MessageFilters\.h\"/\#include \"helics\/shared_api_library\/MessageFilters\.h\"/'   helics_wrap.cxx
 
+  mv helics.go helics_wrap.cxx helics
+
   exit
 fi
 
